@@ -1,44 +1,39 @@
-# 🔁 Recursion:Palindrome Checker Using Recursion in Python
+# 🔁 Types of Recursion: Head Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to check whether a given string is a **palindrome** using **recursion**.
-
----
+To write a Python program to demonstrate **Head Recursion** by finding and printing the sequence based on the sum of all digits (even or odd adjusted input).
 
 ## 🧠 ALGORITHM:
 
 1. **Start**
-2. Define a recursive function `is_palindrome(word)`
-   - **Base Case:** If the string length is less than 1, return `True`
-   - **Recursive Case:** If the first and last characters match, call the function recursively on the substring without first and last characters
-   - Else, return `False`
-3. Get input from the user
-4. Call the recursive function
-5. Print whether the string is a palindrome
-6. **Stop**
-
----
+2. Define a recursive function `fun(n)`
+3. In the function:
+   - Create a recursive call at the **beginning** (Head Recursion)
+   - Print the result after the recursive call
+4. Take input from the user
+5. If input is odd, convert it to the next even number
+6. Call the recursive function
+7. **Stop**
 
 ## 💻 PROGRAM:
 ```
-def is_palindrome(word):
-    if len(word) < 1:
-        return True
-    if word[0] == word[-1]:
-        return is_palindrome(word[1:-1])
-    return False
+def sum_digits(n):
+    return sum(int(d) for d in str(n))
 
-# Get user input
-text = input("Enter a word: ")
+def fun(n):
+    if n <= 0:
+        return
+    fun(n - 2)  # Head recursion
+    print(f"{n} → {sum_digits(n)}")
 
-# Check and print result
-if is_palindrome(text):
-    print("It's a palindrome!")
-else:
-    print("Not a palindrome.")
+num = int(input("Enter a number: "))
+if num % 2 != 0:
+    num += 1
+fun(num)
 ```
+
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/d53b80c7-95e1-4c33-8c27-16925d686b79)
+![image](https://github.com/user-attachments/assets/7f31d53c-609f-4900-9b9b-a8806ae82db9)
 
 ## RESULT
 Program executed successfully.
