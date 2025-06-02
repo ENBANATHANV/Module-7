@@ -3,11 +3,6 @@
 ## 🎯 AIM:
 To write a Python program to evaluate # 📐 Taylor Series:sinh(x) Evaluation using Recursion in Python
 
-## 🎯 AIM:
-To write a Python program to evaluate the value of **sinh(x)** for **n terms** using recursion.
-
----
-
 ## 🧠 ALGORITHM:
 
 1. **Start**
